@@ -9,7 +9,7 @@ public class calculator {
 
     do{
         int a=sc.nextInt();
-        System.out.println("Select any operation: \n / | * | + | -");
+        System.out.println("Select any operation: \n / | * | + | - | %");
         char op=sc.next().charAt(0);
         int b=sc.nextInt();
 
@@ -17,7 +17,13 @@ public class calculator {
         {
             case '/':
             {
-                System.out.println(a/b);
+                if(b==0)
+                {
+                    System.out.println("Enter valid number.");
+                }
+                else {
+                    System.out.println(a/b);
+                }
             }
             break;
             case '*':
@@ -35,6 +41,14 @@ public class calculator {
                 System.out.println(a-b);
             }
             break;
+            case '%':
+                if(b==0)
+                {
+                    System.out.println("Enter valid number.");
+                }
+                else {
+                    System.out.println(a%b);
+                }
             default:
             {
                 System.out.println("Choose correct operation!");
