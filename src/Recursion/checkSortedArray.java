@@ -7,7 +7,7 @@ public class checkSortedArray {
         if(index==arr.length-1){
          return true;
         }
-      if(arr[index]<arr[index+1]){
+      if(arr[index]<=arr[index+1]){
          return checkSort(arr,index+1);
       }
       else{
